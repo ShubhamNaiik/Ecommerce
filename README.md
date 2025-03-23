@@ -1,6 +1,8 @@
 # Ecommerce
 
-##  Introduction  
+##  Introduction 
+<img width="1280" alt="Image" src="https://github.com/user-attachments/assets/688d145e-bedc-4e87-97fc-204edff952b4" />
+
 This project analyzes e-commerce transaction data to evaluate sales performance, regional trends, product category insights, and customer segments. The purpose is to derive business intelligence from historical sales and optimize marketing, logistics, and inventory decisions.
 
 ##  Objective  
@@ -33,9 +35,13 @@ The objective of this dashboard is to identify high-performing products, regions
 | `Shipping Mode`      | object            | Additional attribute                   |
 
 ##  Key Findings  
-- **Technology** is the top-performing category in both sales and profit  
-- The **West and East regions** contribute the most to overall revenue  
-- Customers from the **Consumer segment** generate the highest order volume  
+- **Technology** is the top-performing category in both sales and profit
+- The **West and East regions** contribute the most to overall revenue
+  <img width="643" alt="Image" src="https://github.com/user-attachments/assets/ecc465fa-af26-4119-925d-7487bcd54108" />
+   
+- Customers from the **Consumer segment** generate the highest order volume
+  <img width="563" alt="Image" src="https://github.com/user-attachments/assets/27e5dd7c-f36a-4e7f-af4f-f404fec19522" />
+  
 - Higher discounts tend to reduce profitability in certain product categories  
 - Top-performing cities include **New York, Los Angeles, and Seattle**  
 
