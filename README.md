@@ -1,55 +1,86 @@
-# Ecommerce
+# Ecommerce Sales and Performance Dashboard
 
-##  Introduction 
-<img width="1280" alt="Image" src="https://github.com/user-attachments/assets/688d145e-bedc-4e87-97fc-204edff952b4" />
+## Project Overview
+This project analyzes sales data across various customer segments, regions, and product categories. Using an interactive Excel dashboard, the analysis provides key insights into sales performance, profit margins, order quantities, and customer demographics to guide decision-making for businesses looking to optimize their sales strategies.
 
-This project analyzes e-commerce transaction data to evaluate sales performance, regional trends, product category insights, and customer segments. The purpose is to derive business intelligence from historical sales and optimize marketing, logistics, and inventory decisions.
+## Objectives
+- **Sales Performance Analysis**: Evaluate sales and profit margins across regions and product categories.
+- **Customer Segmentation**: Understand customer demographics and behavior for targeted marketing.
+- **Product Performance**: Analyze top-selling products and order quantities by market.
+- **Market Trends**: Track trends in order volume, sales, and profits over time.
+- **Operational Insights**: Explore shipping modes, order statuses, and their impact on sales.
 
-##  Objective  
-The objective of this dashboard is to identify high-performing products, regions with the most revenue, customer buying behaviors, and factors affecting profit margins. The analysis enables data-driven decision-making for growth strategies.
+## Dashboard 
+![image](https://github.com/user-attachments/assets/af961ee3-b461-4977-b8da-cc1121c66114)
 
-##  Dataset Overview  
 
-| Column Name          | Data Type         | Description                            |
-|----------------------|-------------------|----------------------------------------|
-| `Category Name`      | object            | Additional attribute                   |
-| `Customer City`      | object            | Additional attribute                   |
-| `Customer Fname`     | object            | Additional attribute                   |
-| `Customer Id`        | int64             | Additional attribute                   |
-| `Customer Segment`   | object            | Additional attribute                   |
-| `Customer State`     | object            | Additional attribute                   |
-| `Customer Zipcode`   | int64             | Additional attribute                   |
-| `Market`             | object            | Additional attribute                   |
-| `Order Customer Id`  | int64             | Additional attribute                   |
-| `Order Date`         | datetime64[ns]    | Date when the order was placed         |
-| `Order Id`           | int64             | Additional attribute                   |
-| `Order Region`       | object            | Additional attribute                   |
-| `Order Item Total`   | float64           | Additional attribute                   |
-| `Order Quantity`     | int64             | Additional attribute                   |
-| `Product Price`      | float64           | Additional attribute                   |
-| `Profit Margin`      | float64           | Additional attribute                   |
-| `Profit Per Order`   | float64           | Additional attribute                   |
-| `Sales`              | float64           | Sales revenue from the order           |
-| `Order Country`      | object            | Additional attribute                   |
-| `Order Status`       | object            | Additional attribute                   |
-| `Shipping Mode`      | object            | Additional attribute                   |
+## Dataset Description
+The project uses sales transaction data with the following key columns:
 
-##  Key Findings  
-- **Technology** is the top-performing category in both sales and profit
-- The **West and East regions** contribute the most to overall revenue
-  <img width="643" alt="Image" src="https://github.com/user-attachments/assets/ecc465fa-af26-4119-925d-7487bcd54108" />
-   
-- Customers from the **Consumer segment** generate the highest order volume
-  <img width="563" alt="Image" src="https://github.com/user-attachments/assets/27e5dd7c-f36a-4e7f-af4f-f404fec19522" />
-  
-- Higher discounts tend to reduce profitability in certain product categories  
-- Top-performing cities include **New York, Los Angeles, and Seattle**  
+| Column Name             | Description                            |
+|-------------------------|----------------------------------------|
+| Customer ID             | Unique identifier for each customer    |
+| Customer City, State    | Customer's geographical location       |
+| Customer Segment        | The customer type (e.g., Consumer)     |
+| Order Date              | Date when the order was placed         |
+| Product Category        | Category of the product purchased      |
+| Product Price           | Price of the product                   |
+| Order Quantity          | Number of products in the order        |
+| Sales                   | Total sales amount for the order       |
+| Profit Margin           | Profit margin for the order            |
+| Profit Per Order        | Profit earned from the order           |
+| Shipping Mode           | Type of shipping selected              |
+| Order Status            | Status of the order (e.g., Complete)   |
 
-##  Recommendations  
-1. Focus **marketing efforts** on high-revenue regions and top customer segments
-2. Reassess **discount strategies** to avoid profit loss in specific categories
-3. **Stock more inventory** for high-demand items from top-performing sub-categories
-4. Introduce **loyalty programs** targeting the Consumer segment to boost retention  
+## Data Preparation
+- Cleaned the dataset to standardize column formats.
+- Used Excel functions like `SUMIFS`, `AVERAGEIFS`, and `COUNTIF` to calculate key metrics such as total sales, average profit, and number of orders.
+- Created PivotTables and PivotCharts to summarize and filter data.
+- Developed slicers for user interaction to explore different metrics by customer segment, region, or time period.
 
-##  Conclusion  
-This dashboard provides actionable insights for sales optimization, product strategy, and customer engagement.By continuously monitoring sales trends
+## Dashboard Features
+- **KPI Cards**: Displayed total sales, profit margin, and average order quantity for quick insights.
+- **Sales by Region**: A map view showing total sales in different regions and countries.
+- **Product Performance**: Ranking of top-selling products and categories by sales.
+- **Profit Margin Trends**: Line chart tracking profit margins over time.
+- **Customer Segmentation**: Bar charts illustrating sales and profit by customer type.
+- **Shipping Mode Impact**: Analysis of how shipping modes influence sales.
+
+## Key Insights
+1. **Sales Growth by Region**:
+   - The Europe region has shown the highest growth in sales, with the largest contribution coming from countries like **Francia** and **Germany**. This suggests that the business should prioritize expansion efforts in these regions.
+
+![image](https://github.com/user-attachments/assets/611c6d4d-dcfb-4b85-9dbd-6fc848f193ba)
+
+
+2. **Top-Selling Product Categories**:
+   - The **Cardio Equipment** category consistently generates the highest sales, with a **10% growth** year-over-year.
+
+![image](https://github.com/user-attachments/assets/536233bd-a5fd-4e67-a31d-cdb5122ba105)
+
+
+3. **Customer Segment Performance**:
+   - **Consumers** make up **75%** of all orders, but **Business Clients** contribute higher average sales per order.
+
+4. **Profit Margin Analysis**:
+   - Products from the **Sporting Goods** category exhibit the highest profit margins at **18%**, whereas the **Strenght Training** category shows negative profit margins.
+
+5. **Shipping Mode Effectiveness**:
+   - **Standard Class** is the most commonly selected shipping mode, but **Same Day** has shown a higher profit margin per order.
+
+## Recommendations
+- **For Sales Teams**:
+  - Focus on expanding into high-growth regions like LATAM and Europe.
+  - Promote top-selling product categories (e.g., Cardio Equipment) through targeted marketing campaigns.
+
+- **For Marketing Teams**:
+  - Segment marketing efforts based on customer type (Consumer vs. Business Clients) and geographic location to maximize engagement.
+
+- **For Operations Teams**:
+  - Analyze shipping modes like **First Class** and **Second Class** and optimize fulfillment processes to support faster shipping options, improving customer satisfaction and profit margins.
+
+## Conclusion
+This analysis provides valuable insights into ecommerce sales performance across multiple regions and product categories. By leveraging data-driven strategies, businesses can better target their resources, optimize their product offerings, and improve overall sales and profitability.
+
+
+
